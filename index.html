@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['case1'] = '설명1';
-            dic_class2information['case2'] = '설명2';
-            dic_class2information['case3'] = '설명3';
+            dic_class2information['red apple'] = '사과나무의 열매.';
+            dic_class2information['one tomato'] = '식물 가짓과의 한해살이풀, 높이는 1~1.5미터이며, 잎은 어긋나고 우상 복엽이다. 여름에 노란 꽃이 총상(總狀) 화서로 잎겨드랑이에 피고, 열매는 장과(漿果)로 붉게 익으며 식용한다, 남아메리카 열대 지방이 원산지로 밭에서 재배한다.';
+            dic_class2information['one strawberry'] = '장미과 딸기속, 거문딸기속, 뱀딸기속 및 나무딸기속의 일부를 포함하는 식물을 통틀어 이르는 말, 보통은 딸기속 식물을 가리키며 열매는 식용하는 것이 많다.';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
